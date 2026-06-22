@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KuroSoft Downloads</title>
+  <style>
+    :root {
+      --bg: #0b111a;
+      --card: #111927;
+      --text: #e5e7eb;
+      --text-sub: #9ca3af;
+      --accent: #ef4444;
+      --accent-2: #22c55e;
+      --radius: 14px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(239,68,68,0.08), transparent 30%),
+                  radial-gradient(circle at 80% 0%, rgba(34,197,94,0.08), transparent 25%),
+                  var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 40px 12px;
+    }
+    .container {
+      width: 100%;
+      max-width: 780px;
+    }
+    .title {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: var(--text-sub);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .card {
+      background: linear-gradient(135deg, rgba(239,68,68,0.08), rgba(34,197,94,0.05));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+    .header {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: linear-gradient(135deg,#ef4444,#b91c1c);
+      display: grid;
+      place-items: center;
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .badge {
+      margin-left: auto;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #22c55e;
+      border: 1px solid rgba(34,197,94,0.45);
+      background: rgba(34,197,94,0.15);
+      letter-spacing: 0.5px;
+    }
+    .meta { font-size: 13px; color: var(--text-sub); }
+    .whats-new { margin: 14px 0 18px; }
+    .whats-new-title { font-size: 13px; font-weight: 800; color: #22c55e; margin-bottom: 8px; }
+    .whats-new ul { margin: 0; padding-left: 18px; color: var(--text-sub); line-height: 1.7; }
+    button.download {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg,#ef4444,#b91c1c);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 800;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    button.download:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(239,68,68,0.35); }
+    .tip { margin-top: 10px; font-size: 11px; color: #fbbf24; background: rgba(251,191,36,0.12); border: 1px solid rgba(251,191,36,0.35); padding: 10px 12px; border-radius: 10px; line-height: 1.6; }
+    .footer { margin-top: 20px; color: var(--text-sub); font-size: 12px; text-align: center; }
+    a { color: #93c5fd; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">📦 KuroSoft Downloads</div>
+    <div class="subtitle">Latest builds for KuroSoft apps. This page delivers the download the same way as the other tools on the hub.</div>
+
+    <div class="card">
+      <div class="header">
+        <div class="logo">🚀</div>
+        <div>
+          <div style="font-size:20px;font-weight:800">BC Crash Auto Trader</div>
+          <div class="meta">v1.8.3 · Android APK · BC.Game · Build EAS-22 (versionCode 22)</div>
+        </div>
+        <div class="badge">NEW • v1.8.3</div>
+      </div>
+
+      <div class="meta" style="margin-bottom:14px; line-height:1.7">
+        Fully automated BC.Game crash trading bot with Classic+Trenball and Trend engines. v1.8.3 fixes authentication stability and "logged in on another device" issues; sessions persist reliably.
+      </div>
+
+      <div class="whats-new">
+        <div class="whats-new-title">WHAT'S NEW IN v1.8.3</div>
+        <ul>
+          <li>Auth stability fixes; sessions persist</li>
+          <li>Device token persistence; no false "other device" kicks</li>
+          <li>Automatic token refresh to prevent expiry</li>
+          <li>Improved backend device sync</li>
+        </ul>
+      </div>
+
+      <button class="download" onclick="downloadAPK()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        <span id="dl-label">⬇ Download APK — v1.8.3</span>
+      </button>
+
+      <div class="tip">
+        If Android shows <strong>Couldn't install (-7)</strong> or <strong>Conflicting app signatures</strong>, uninstall the old BC Crash Trader once, then install this re-signed build.
+      </div>
+
+      <div class="footer">Android 8.0+ required · KuroSoft Hub account needed · Active All Access subscription required</div>
+    </div>
+  </div>
+
+  <script>
+    const APK_URL = 'https://firebasestorage.googleapis.com/v0/b/betlab-pro.appspot.com/o/downloads%2Fbc-crash-trader-v1.8.3-build22.apk?alt=media';
+    function downloadAPK() {
+      const btn = document.querySelector('button.download');
+      const label = document.getElementById('dl-label');
+      if (btn) btn.disabled = true;
+      if (label) label.textContent = 'Downloading...';
+      window.location.href = APK_URL;
+      setTimeout(() => { if (btn) btn.disabled = false; if (label) label.textContent = '⬇ Download APK — v1.8.3'; }, 2000);
+    }
+  </script>
+</body>
+</html>
